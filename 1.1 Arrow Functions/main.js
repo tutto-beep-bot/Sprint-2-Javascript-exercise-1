@@ -45,3 +45,8 @@ function printNumbers(numbers){
 }
 
 printNumbers([1, 2, 3, 4, 5]); // Output: 1, 2, 3, 4, 5
+
+
+// Level 3 - Ejercicio 5
+
+setTimeout(() => console.log('This is a delayed message.'), 3000); // Output: This is a delayed message.
