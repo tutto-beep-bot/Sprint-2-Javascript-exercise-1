@@ -35,4 +35,13 @@ const Person = {
 Person.greet(); // Output: Hola, mi nombre es Davi.
 
 
+// Level 2 - Ejercicio 4
 
+function printNumbers(numbers){
+    for (let i = 0; i < numbers.length; i++) {
+        const print = () => console.log(numbers[i]);
+        print();
+    }
+}
+
+printNumbers([1, 2, 3, 4, 5]); // Output: 1, 2, 3, 4, 5
