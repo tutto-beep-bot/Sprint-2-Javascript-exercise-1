@@ -172,3 +172,170 @@ function printChar(char){
 }
 
 processString('cibernarium', printChar) // Output: This is your string in upper case: CIBERNARIUM.
+
+
+                        //Ejercicio 1.4 Rest & Spread Operators
+
+
+// Level 1 - Ejercicio 1
+
+const array1 = [4, 5, 6]
+
+const array2 = [1, 2, 3]
+
+const mergedArray = [...array2, ...array1]
+
+console.log(mergedArray) // Output: [4, 5, 6, 1, 2, 3]
+
+
+
+// Level 1 - Ejercicio 2
+
+function sum(...args){
+    let sumTotal = 0
+    for(let i = 0; i < args.length; i++){
+        sumTotal += args[i]
+    }
+    return sumTotal
+}
+
+    // OR using slice()
+
+function sum(...args){
+    return args.reduce((total, arg) => total + arg, 0)
+}
+
+
+console.log(sum(1, 2, 3, 4, 5)) // Output: 15
+
+
+//Level 2 - Ejercicio 3
+
+const object1 = {
+    name: 'Davi',
+    age: 29,
+    city: 'Barcelona'
+};
+
+const object2 = {...object1};
+
+console.log(object2); // Output: name: 'Davi', age: 29, city: 'Barcelona'
+
+//changing properties
+
+object2.name = 'Raul';
+
+console.log(object2); // Output: name: 'Raul', age: 29, city: 'Barcelona'
+console.log(object1) // Output: name: 'Davi', age, 29, city 'Barcelona'
+
+
+
+//Level 2 - Ejercicio 4
+
+const array3 = ['Davi', 'Raul', 'Mateus', 'Sofia', 5600]
+
+const [first, second, ...rest] = array3; 
+
+console.log(first) 
+console.log(second)
+console.log(rest)
+
+
+// Level 3 - Ejercicio 5
+
+function multiply(a, b, c) {
+    return a * b * c;
+}
+
+const numeros = [10, 6, 14]
+
+console.log(multiply(...numeros))
+
+// Level 3 - Ejercicio 6
+
+const Person1 = {name: 'Davi', surname: 'Lessa'}
+
+const Location = {city: 'Barcelona', country: 'Spain'}
+
+const personWithLocation = {...Person1, ...Location}
+
+console.log(personWithLocation) 
+
+
+
+                        //Ejercicio 1.5 Array Transformations
+
+// Level 1 - Ejercicio 1
+
+const arrayMap = [1, 2, 3, 4]
+
+const newArrayMap = arrayMap.map(i => i * i)
+
+console.log(newArrayMap)
+
+
+
+// Level 1 - Ejercicio 2
+
+const arrayFilter = [1, 2, 3, 4]
+
+const ArrayEven = arrayFilter.filter(i => (i % 2 == 0))
+
+console.log(ArrayEven)
+
+
+// Level 1 - Ejercicio 3
+
+const arrayNumbers = [1, 10, 8, 11]
+
+const arrayFind = arrayNumbers.find( i => i > 10)
+
+console.log(arrayFind)
+
+
+
+// Level 1 - Ejercicio 4
+
+const arrayNumeros = [13, 7, 8, 21]
+
+const arrayReduce = arrayNumeros.reduce((total, num) => total + num, 0)
+
+console.log(arrayReduce)
+
+
+
+
+// Level 2 - Ejercicio 5
+
+const bigArray = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9]
+    .filter (i => i >= 10)
+    .map (i => i * 2)
+    .reduce((total, num) => total + num, 0);
+
+console.log(bigArray)
+
+
+
+// Level 3 - Ejercicio 6
+
+const array10 = [11, 12, 13, 14]
+
+const arrayCheckSome = array10.some(num => num > 10);
+console.log(arrayCheckSome)
+
+const arrayCheckEvery = array10.every(num => num > 10);
+console.log(arrayCheckEvery)
+
+
+
+
+                        //Ejercicio 1.6 Array Loops
+
+
+//Level 1 - Ejercicio 1
+
+let names = ['Anna', 'Bernat', 'Clara'];
+
+names.forEach(element => { console.log(element)});
+
+//Level 1 - Ejercicio 1
