@@ -1,26 +1,22 @@
 'use strict'
 
-                        // Ejercicio 1.1 Arrow Functions 
 
-// Level 1 - Ejercicio 1 
-
-    // Funccion normal de suma
 function sum(x, y) {
     return x + y;
 }
-    // version arrow function de suma
+
 
 const suma = (x, y) => x + y;
-console.log(sum(5, 3)); // Output: 8
+console.log(sum(5, 3)); 
 
 
-//Level 1 - Ejercicio 2
+
 
 const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 console.log(randomNumber());
 
 
-//Level 1 - Ejercicio 3
+
 
 const Person = {
     name: 'Davi',
@@ -32,10 +28,10 @@ const Person = {
     }
 };
 
-Person.greet(); // Output: Hola, mi nombre es Davi.
+Person.greet();
 
 
-// Level 2 - Ejercicio 4
+
 
 function printNumbers(numbers){
     for (let i = 0; i < numbers.length; i++) {
@@ -44,37 +40,37 @@ function printNumbers(numbers){
     }
 }
 
-printNumbers([1, 2, 3, 4, 5]); // Output: 1, 2, 3, 4, 5
+printNumbers([1, 2, 3, 4, 5]);
 
 
-// Level 3 - Ejercicio 5
-
-setTimeout(() => console.log('This is a delayed message.'), 3000); // Output: This is a delayed message.
 
 
-                        //Ejercicio 1.2 Ternary Operators
+setTimeout(() => console.log('This is a delayed message.'), 3000); 
 
-// Level 1 - Ejercicio 1
+
+
+
+
 
 function canDrive(age) {
     return age >= 18 ? 'Can drive.' : 'Cannot drive.';
 }
 
-console.log(canDrive(16)); // Output: Cannot drive.
-console.log(canDrive(32)); // Output: Can drive.
+console.log(canDrive(16)); 
+console.log(canDrive(32)); 
 
 
-// Level 1 - Ejercicio 2
+
 
 let num1 = 5;
 let num2 = 13;
 let isGreater = (num1 > num2) ? `num1 is greater.` : `num2 is greater.`;
 
 
-console.log(isGreater) // Output: num2 is greater.
+console.log(isGreater) 
 
 
-// Level 2 - Ejercicio 3
+
 
 let num = 1
 
@@ -83,10 +79,10 @@ let checkNumber = (num) =>
     num < 0 ? 'Negative.' :
     'Zero.'
 
-console.log(checkNumber(3)) // Output: Positive.
+console.log(checkNumber(3)) 
 
 
-// Level 3  - Ejercicio 4
+
 
 const numbers = [1, 2, 3, 4, 5];
 
@@ -96,14 +92,13 @@ function evenOrOdd(numbers) {
     }
 }
 
-evenOrOdd(numbers); // Output: 1 is odd., 2 is even., 3 is odd., 4 is even., 5 is odd.
+evenOrOdd(numbers); 
 
 
 
 
-                        //Ejercicio 1.3 Callbacks 
 
-// Level 1 - Ejercicio 1
+
 
 function process(number, callback) {
     console.log(`The number is ${number}.`);
@@ -114,10 +109,10 @@ function goodDay() {
     console.log('Have a good day.');
 }
 
-process(5, goodDay); // Output: The number is 5. Have a good day.
+process(5, goodDay); 
 
 
-// Level 1 - Ejercicio 2
+
 
 function calculator(num1, num2, operation) {
     return operation(num1, num2);
@@ -127,10 +122,10 @@ function sum(a, b) {
     return a + b;
 }
 
-console.log(calculator(3, 4, sum)) // Output: 7
+console.log(calculator(3, 4, sum)) 
 
 
-// Level 2 - Ejercicio 3
+
 
 function waitAndGreet(name, callback) {
     setTimeout(() => callback(name), 2000) 
@@ -140,10 +135,10 @@ function greet(name) {
     console.log(`Hello, ${name}!`);
 }
 
-waitAndGreet('Davi', greet) //Output: Hello, Davi! (2 seconds later)
+waitAndGreet('Davi', greet) 
 
 
-// Level 2 - Ejercicio 4
+
 
 const array = ['Ford', 'Volkswagen', 'BMW', 'Chevrolet', 'Renault']
 
@@ -157,10 +152,11 @@ function capitalize(car){
     console.log(car.toUpperCase())
 }
 
-processElements(array, capitalize) // Output: FORD, VOLKSWAGEN, BMW, CHEVROLET, RENAULT
+processElements(array, capitalize) 
 
 
-// Level 3 - Ejercicio 5
+
+
 
 function processString(char, callback){
     let charUpper = char.toUpperCase()
@@ -171,13 +167,12 @@ function printChar(char){
     console.log(`This is your string in upper case: ${char}.`)
 }
 
-processString('cibernarium', printChar) // Output: This is your string in upper case: CIBERNARIUM.
+processString('cibernarium', printChar) 
 
 
-                        //Ejercicio 1.4 Rest & Spread Operators
 
 
-// Level 1 - Ejercicio 1
+
 
 const array1 = [4, 5, 6]
 
@@ -185,11 +180,12 @@ const array2 = [1, 2, 3]
 
 const mergedArray = [...array2, ...array1]
 
-console.log(mergedArray) // Output: [4, 5, 6, 1, 2, 3]
+console.log(mergedArray)
 
 
 
-// Level 1 - Ejercicio 2
+
+
 
 function sum(...args){
     let sumTotal = 0
@@ -199,17 +195,18 @@ function sum(...args){
     return sumTotal
 }
 
-    // OR using slice()
+
+
 
 function sum(...args){
     return args.reduce((total, arg) => total + arg, 0)
 }
 
 
-console.log(sum(1, 2, 3, 4, 5)) // Output: 15
+console.log(sum(1, 2, 3, 4, 5)) 
 
 
-//Level 2 - Ejercicio 3
+
 
 const object1 = {
     name: 'Davi',
@@ -219,18 +216,19 @@ const object1 = {
 
 const object2 = {...object1};
 
-console.log(object2); // Output: name: 'Davi', age: 29, city: 'Barcelona'
+console.log(object2); 
 
-//changing properties
+
 
 object2.name = 'Raul';
 
-console.log(object2); // Output: name: 'Raul', age: 29, city: 'Barcelona'
-console.log(object1) // Output: name: 'Davi', age, 29, city 'Barcelona'
+console.log(object2);
+console.log(object1) 
 
 
 
-//Level 2 - Ejercicio 4
+
+
 
 const array3 = ['Davi', 'Raul', 'Mateus', 'Sofia', 5600]
 
@@ -241,7 +239,8 @@ console.log(second)
 console.log(rest)
 
 
-// Level 3 - Ejercicio 5
+
+
 
 function multiply(a, b, c) {
     return a * b * c;
@@ -251,7 +250,8 @@ const numeros = [10, 6, 14]
 
 console.log(multiply(...numeros))
 
-// Level 3 - Ejercicio 6
+
+
 
 const Person1 = {name: 'Davi', surname: 'Lessa'}
 
@@ -263,9 +263,9 @@ console.log(personWithLocation)
 
 
 
-                        //Ejercicio 1.5 Array Transformations
 
-// Level 1 - Ejercicio 1
+
+
 
 const arrayMap = [1, 2, 3, 4]
 
@@ -275,7 +275,7 @@ console.log(newArrayMap)
 
 
 
-// Level 1 - Ejercicio 2
+
 
 const arrayFilter = [1, 2, 3, 4]
 
@@ -284,7 +284,7 @@ const ArrayEven = arrayFilter.filter(i => (i % 2 == 0))
 console.log(ArrayEven)
 
 
-// Level 1 - Ejercicio 3
+
 
 const arrayNumbers = [1, 10, 8, 11]
 
@@ -294,7 +294,7 @@ console.log(arrayFind)
 
 
 
-// Level 1 - Ejercicio 4
+
 
 const arrayNumeros = [13, 7, 8, 21]
 
@@ -305,7 +305,7 @@ console.log(arrayReduce)
 
 
 
-// Level 2 - Ejercicio 5
+
 
 const bigArray = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9]
     .filter (i => i >= 10)
@@ -316,7 +316,8 @@ console.log(bigArray)
 
 
 
-// Level 3 - Ejercicio 6
+
+
 
 const array10 = [11, 12, 13, 14]
 
@@ -329,22 +330,20 @@ console.log(arrayCheckEvery)
 
 
 
-                        //Ejercicio 1.6 Array Loops
 
 
-//Level 1 - Ejercicio 1
 
 let names = ['Anna', 'Bernat', 'Clara'];
 
 names.forEach(element => { console.log(element)});
 
-//Level 1 - Ejercicio 2
+
+
 
 for (const element of names) {
     console.log(element);
 }
 
-// Level 1 - Ejercicio 3
 
 let numbersArray = [1, 2, 3, 4, 5, 6];
 
@@ -353,7 +352,7 @@ console.log(newNumbersArray)
 
 
 
-// Level 2 - Ejercicio 4
+
 
 const objOna = {name: 'Ona', age: 25, city: 'Barcelona'}
 
@@ -362,7 +361,8 @@ for(let key in objOna){
 }
 
 
-//Level 2 - Ejercicio 5
+
+
 
 let arrNumeros = [1, 2, 3, 4, 5, 6];
 
@@ -374,7 +374,7 @@ for(let element of arrNumeros){
 
 
 
-// Level 3 - Ejercicio 6
+
 
 let nombres = ['Anna', 'Bernat', 'Clara']
 let index = 0;
@@ -386,10 +386,8 @@ for(let element of nombres){
 
 
 
-                        //Ejercicio 1.7 - Promises & Async/Await
 
 
-// Level 1 - Ejercicio 1
 
 const hello = new Promise((resolve) => {
     setTimeout(() => {
@@ -398,14 +396,15 @@ const hello = new Promise((resolve) => {
 });
 
 
-// Level 1 - Ejercicio 2
+
 
 hello.then((message) => {
     console.log(message);
 })
 
 
-// Level 1 - Ejercicio 3
+
+
 let input = "Hello"
 
 const getInput = new Promise((resolve, reject) => {
@@ -427,7 +426,6 @@ getInput
     })
 
 
-// Level 1 - Ejercicio 4
 
 
 async function printHello() {
@@ -439,7 +437,6 @@ async function printHello() {
 printHello()
 
 
-// Level 2 - Ejercicio 5
 
 async function printHello2() {
     try {
@@ -451,7 +448,6 @@ async function printHello2() {
 }
 
 
-// Level 3 - Ejercicio 6
 
 const promise1 = new Promise((resolve) => {
     setTimeout(() => {
