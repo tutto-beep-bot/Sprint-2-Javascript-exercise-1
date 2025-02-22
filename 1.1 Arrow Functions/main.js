@@ -338,4 +338,138 @@ let names = ['Anna', 'Bernat', 'Clara'];
 
 names.forEach(element => { console.log(element)});
 
-//Level 1 - Ejercicio 1
+//Level 1 - Ejercicio 2
+
+for (const element of names) {
+    console.log(element);
+}
+
+// Level 1 - Ejercicio 3
+
+let numbersArray = [1, 2, 3, 4, 5, 6];
+
+let newNumbersArray = numbersArray.filter(element => element % 2 == 0)
+console.log(newNumbersArray)
+
+
+
+// Level 2 - Ejercicio 4
+
+const objOna = {name: 'Ona', age: 25, city: 'Barcelona'}
+
+for(let key in objOna){
+    console.log(`${key}: ${objOna[key]}`)
+}
+
+
+//Level 2 - Ejercicio 5
+
+let arrNumeros = [1, 2, 3, 4, 5, 6];
+
+for(let element of arrNumeros){
+    console.log(element);
+    if(element == 5)
+        break;
+}
+
+
+
+// Level 3 - Ejercicio 6
+
+let nombres = ['Anna', 'Bernat', 'Clara']
+let index = 0;
+
+for(let element of nombres){
+    console.log(`Index: ${index}. Element: ${element}`)
+    index++;
+}
+
+
+
+                        //Ejercicio 1.7 - Promises & Async/Await
+
+
+// Level 1 - Ejercicio 1
+
+const hello = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve('Hello, world!');
+    }, 2000);
+});
+
+
+// Level 1 - Ejercicio 2
+
+hello.then((message) => {
+    console.log(message);
+})
+
+
+// Level 1 - Ejercicio 3
+let input = "Hello"
+
+const getInput = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if(input === 'Hello') {
+            resolve('Input is valid');
+        } else {
+            reject('Input is invalid');
+        }
+    }, 2000);
+})
+
+getInput
+   .then((message) => {
+        console.log(message);
+    })
+    .catch((error) => {
+        console.error(error);
+    })
+
+
+// Level 1 - Ejercicio 4
+
+
+async function printHello() {
+
+        const message = await hello;
+        console.log(message);
+}
+
+printHello()
+
+
+// Level 2 - Ejercicio 5
+
+async function printHello2() {
+    try {
+        const message = await hello;
+        console.log(message);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+// Level 3 - Ejercicio 6
+
+const promise1 = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve('Promise 1');
+    }, 2000);
+});
+
+const promise2 = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve('Promise 2');
+    }, 3000);
+});
+
+Promise.all([promise1, promise2])
+    .then((results) => {
+        console.log('All promises resolved');
+        console.log(results)
+    })
+    .catch((error) => {
+        console.error(error);
+    })
